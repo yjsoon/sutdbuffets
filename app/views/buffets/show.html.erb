@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @buffet.title %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @buffet.location %>
+</p>
+
+<%= image_tag(@buffet.picture_url, width: 200) if @buffet.picture.present? %>
+
+<br>
+
+<%= link_to 'Edit', edit_buffet_path(@buffet) %> |
+<%= link_to 'Back', buffets_path %>
